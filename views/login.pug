@@ -1,0 +1,16 @@
+doctype HTML
+head
+    title 끝투
+body
+    .logo
+        img(src='/img/login/logo.png' class="logo")
+
+        form(action='/login', method='post')
+            div
+                input(type='text', name='userId',id='userId' placeholder='ID')
+            div
+                input(type='password', name='password', id='password', placeholder='Password')
+            div
+                input(type='submit', value='Sign In')
+            div
+                a(href='/signup'): p 회원가입

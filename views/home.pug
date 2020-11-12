@@ -1,0 +1,23 @@
+doctype HTML
+html
+    head
+        title 끝투  
+    body
+        .mobile-size=div
+            include header.pug
+            div
+                p #{userName}님
+                p 건전한 투자를 항상 응원하겠습니다
+            div
+                - balance = 0
+                for account in accounts
+                    if(account.bankName=='project')
+                        - balance = account.balance + balance
+                    else
+                        p=account.bankName
+                        p=account.balance
+            div
+                p 끝전 잔액
+                p=balance
+
+            

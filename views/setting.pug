@@ -1,0 +1,55 @@
+doctype HTML
+html
+    head
+        title 끝투  
+    body
+        include header.pug
+        p #{user.name}님의 My 투자설정
+        p 끝전 단위 설정
+        
+        form(method='post', action='/home/setting')
+            div
+                if(user.transferAmount=='1')
+                    input(type='radio', id='amount', name='amount', value=1, checked)
+                else
+                    input(type='radio', id='amount', name='amount', value=1)
+                print 1,000원미만
+
+                if(user.transferAmount=='2')
+                    input(type='radio', id='amount',name='amount', value=2, checked)
+                else
+                    input(type='radio', id='amount',name='amount', value=2)
+                print 10,000원 미만
+
+                if(user.transferAmount=='3')
+                    input(type='radio',id='amount', name='amount', value=3, checked)
+                else
+                    input(type='radio',id='amount', name='amount', value=3)
+                print 100,000원 미만
+                <br>
+
+            div
+                p 이체 일자 설정
+                input(type='text', id='date', name='date', placeholder=user.transferDate)
+            div
+                p 이체 주기 설정
+                if(user.transferPeriod=='1')
+                    input(type='radio', id='period', name='period', value=1, checked)
+                else
+                    input(type='radio', id='period', name='period', value=1)
+                print 매주
+
+                if(user.transferPeriod=='2')
+                    input(type='radio', id='period', name='period', value=2, checked)
+                else
+                    input(type='radio', id='period', name='period', value=2)
+                print 격주
+
+                if(user.transferPeriod=='3')
+                    input(type='radio',id='period', name='period', value=3, checked)
+                else
+                    input(type='radio',id='period', name='period', value=3)
+                print 매달
+
+            div
+                input(type='submit', value='설정 완료')
