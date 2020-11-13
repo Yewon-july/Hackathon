@@ -1,0 +1,328 @@
+
+.mobile{
+    /* home */
+    position: relative;
+    width: 375px;
+    height: 812px;
+
+    background: #F8A1A1;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+}
+
+.home-title{
+    /* 끝전으로투자하다 */
+    position: absolute;
+    width: 112px;
+    height: 24px;
+    left: 132px;
+    top: 18px;
+}
+
+.home-tab-set{
+    /* My 투자설정 */
+    /* Rectangle 41 */
+    position: absolute;
+    width: 125px;
+    height: 50px;
+    left: 0px;
+    top: 60px;
+    background-color: white;
+  
+}
+.home-tab-set-font{
+    font-family: Inter;
+    text-decoration: none;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 19px;
+        /* display: flex; */
+        align-items: center;
+        text-align: center;
+        vertical-align: middle;
+        letter-spacing: -0.3px;
+
+        color: #000000;
+}
+
+.home-tab-home{
+    /* 계좌조회 */
+    position: absolute;
+    width: 125px;
+    height: 50px;
+    left: 125px;
+    top: 60px;
+    background-color: white;
+}
+
+.home-tab-home-font{
+    text-decoration: none;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    /* display: flex; */
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.3px;
+
+    color: #000000;
+}
+
+.home-tab-top10{
+    /* 추천 Top10 */
+    position: absolute;
+    width: 122px;
+    height: 50px;
+    left: 250px;
+    top: 60px;
+
+    background-color: white;
+}
+
+.home-tab-top10-font{
+    text-decoration: none;
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    /* display: flex; */
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.3px;
+
+    color: #000000;
+}
+
+.home-username{
+    /* 정예원님 */
+
+
+position: absolute;
+width: 66px;
+height: 22px;
+left: 102px;
+top: 133px;
+
+font-family: Inter;
+font-style: normal;
+font-weight: bold;
+font-size: 18px;
+line-height: 22px;
+/* identical to box height */
+
+letter-spacing: -0.3px;
+
+color: #97453A;
+}
+
+.home-username2{
+    /* 건전한 투자를 항상 응원하겠습니다. */
+
+
+position: absolute;
+width: 204px;
+height: 17px;
+left: 102px;
+top: 168px;
+
+font-family: Inter;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 17px;
+/* identical to box height */
+
+letter-spacing: -0.3px;
+
+color: rgba(0, 0, 0, 0.5);
+}
+
+.home-title2{
+    /* 마이데이터 계좌통합 서비스 */
+    position: absolute;
+    width: 204px;
+    height: 22px;
+    left: 37px;
+    /*top: 219px;*/
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    /* identical to box height */
+
+    letter-spacing: -0.3px;
+    padding-bottom: 10px;
+    color: #97453A;
+
+    margin-bottom: 20px;
+}
+
+.home-rec1{
+    /* Rectangle 11 */
+    position: absolute;
+    width: 337px;
+    height: 367px;
+    top: 204px;
+    left: calc(50% - 337px/2 + 2px);
+
+    background: #FFFFFF;
+    border-radius: 8px;
+}
+
+.home-rec2{
+        /* Rectangle 20 */
+        position: absolute;
+        width: 337px;
+        left: calc(50% - 337px/2);
+        top: 73.15%;
+        bottom: 2.83%;
+        
+        background: #FFFFFF;
+        border-radius: 8px;
+}
+
+.home-title3{
+    /* 끝전 잔액 */
+display: inline-block;
+z-index:2;
+position: absolute;
+width: 70px;
+height: 22px;
+left: 35px;
+top: 611px;
+
+font-family: Inter;
+font-style: normal;
+font-weight: bold;
+font-size: 18px;
+line-height: 22px;
+/* identical to box height */
+
+letter-spacing: -0.3px;
+
+color: #97453A;
+}
+
+.home-account-box{
+    /* Rectangle 41 */
+    position: relative;
+    height: 50px;
+    left: 28px;
+    border-color: rgba(0, 0, 0, 0.4);
+    border-bottom: 1px solid;
+    /*background-color: #343333;*/
+    margin-right: 44px;
+    margin-bottom: 10px;
+    /*display: inline-block;*/
+    /*top: 266px;*/
+}
+
+.home-account-name{
+    /* KB 국민은행 */
+    position: relative;
+
+    margin-left: 16px;
+    display: inline-block;
+    float: left;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: -0.3px;
+
+    text-align: left;
+    vertical-align: middle;
+
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.home-account-balance{
+    /* 571,963원 */
+display: inline-block;
+float: right;
+position: relative;
+
+margin-right: 20px;
+font-family: Inter;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 19px;
+letter-spacing: -0.3px;
+
+text-align: right;
+vertical-align: middle;
+color: rgba(0, 0, 0, 0.8);
+}
+
+.home-add-account{
+    /* Rectangle 21 */
+
+    position: absolute;
+width: 183px;
+left: calc(50% - 183px/2);
+top: 445px;
+bottom: 323px;
+
+background: rgba(151, 69, 58, 0.7);
+border-radius: 8px;
+    height: 44px;
+    border: none;
+
+    background: rgba(151, 69, 58, 0.7);
+    border-radius: 8px;
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    /* identical to box height */
+
+    text-align: center;
+    letter-spacing: -0.3px;
+
+    margin: auto;
+    color: #FFFFFF;
+}
+
+.home-project-title{
+    /* 끝전 잔액 */
+    position: relative;
+    left: 9.33%;
+    /* right: 72%; */
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    /* identical to box height */
+
+    letter-spacing: -0.3px;
+    color: #97453A;
+}
+.home-project-balance{
+    /* 350,808원 */
+
+
+position: absolute;
+left: calc(50% - 183px/2);
+
+font-family: Inter;
+font-style: normal;
+font-weight: bold;
+font-size: 20px;
+line-height: 24px;
+letter-spacing: -0.3px;
+text-align: center;
+color: #97453A;
+}
