@@ -4,17 +4,58 @@
     right: 0px;
     position: absolute;
     text-align: center;
-    vertical-align: middle;
-    margin-top: 5px;
+    /* vertical-align: middle; */
+    /* padding-top: 5px; */
+    margin-top: 0px;
+    padding-bottom: 5px;
 
 }
-.logo{
-    /* Logo */
-    margin-left: 24px;
-    position: relative;
-    height: 36px;
-    top: 0px;
-    vertical-align: middle;
+
+.logo-small{
+    font-family: Inter;
+font-style: normal;
+font-weight: normal;
+font-size: 20px;
+line-height: 20px;
+display: inline;
+align-items: center;
+text-align: center;
+letter-spacing: -0.3px;
+
+color: #97453A;
+}
+
+.logo-big{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 24px;
+    display: inline;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.3px;
+
+    color: #97453A;
+}
+.logo-big-p{
+    margin-left: 10px;
+    width: 375px;
+
+    position: absolute;
+    left: calc(50% - 375px/2);
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 24px;
+    display: inline;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.3px;
+
+    color: #97453A;
 }
 .tab-box{
     position: absolute;
