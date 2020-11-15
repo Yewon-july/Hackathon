@@ -26,3 +26,6 @@ html
             a(href='/home' class='home-tab-set') 계좌조회
             a(href='/home/top10' class='home-tab-set') 추천 Top10
         p.setting-top 추천 Top 10
+        for d in data
+            .stock-data-box
+                p #{d.stock_number}

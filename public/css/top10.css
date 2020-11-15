@@ -100,3 +100,15 @@ color: #97453A;
     color: #97453A;
 
 }
+.stock-data-box{
+    /* Rectangle 45 */
+
+
+    position: absolute;
+    width: 308px;
+    height: 61px;
+    left: calc(50% - 308px/2 - 1.5px);
+    display: block;
+    background-color: antiquewhite;
+
+}
