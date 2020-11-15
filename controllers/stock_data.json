@@ -1,0 +1,37 @@
+{
+  "1": [
+    {
+      "stock_number": "005930",
+      "stock_name": "삼성전자",
+      "stock_price": "57500"
+    }
+  ],
+  "2": [
+    {
+      "stock_number": "000660",
+      "stock_name": "LG전자",
+      "stock_price": "85600"
+    }
+  ],
+  "3": [
+    {
+      "stock_number": "005380",
+      "stock_name": "현대차",
+      "stock_price": "177500"
+    }
+  ],
+  "4": [
+    {
+      "stock_number": "051910",
+      "stock_name": "LG화학",
+      "stock_price": "705000"
+    }
+  ],
+  "5": [
+    {
+      "stock_number": "035720",
+      "stock_name": "카카오",
+      "stock_price": "365500"
+    }
+  ]
+}

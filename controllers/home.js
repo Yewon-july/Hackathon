@@ -54,8 +54,16 @@ const postSetting = async (req, res, next) => {
     });
 }
 
+const top10 = (req, res) => {
+    const json= require('./stock_data_v2.json');
+    console.log(json);
+    console.log(json.stock);
+    res.json(json);
+}
+
 module.exports = {
     home,
     setting,
-    postSetting
+    postSetting,
+    top10
 };

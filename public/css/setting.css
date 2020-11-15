@@ -86,14 +86,14 @@ color: #97453A;
     width: 375px;
     height: 62px;
     left: calc(50% - 375px/2);
-    top: 110px;
+    top: 116px;
 
     font-family: Inter;
     font-style: normal;
     font-weight: bold;
     font-size: 20px;
     line-height: 24px;
-    display: flex;
+    display: block;
     align-items: center;
     letter-spacing: -0.3px;
 
@@ -103,19 +103,17 @@ color: #97453A;
 
 .setting-amount-box{
     /* Rectangle 20 */
-
     margin-left: 10px;
-    margin-top: 10px;
     position: absolute;
     width: 337px;
-    height: 283px;
+    height: 183px;
     left: calc(50% - 337px/2 - 1px);
     top: 172px;
-    
+
     background: #FFFFFF;
     border: 2px solid #97453A;
     box-sizing: border-box;
-    border-radius: 8px;
+    border-radius: 8px; 
 }
 
 
@@ -123,6 +121,23 @@ color: #97453A;
     /* 마이데이터 계좌통합 서비스 */
     position: relative;
     margin: 6%;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    /* identical to box height */
+    letter-spacing: -0.3px;
+
+    color: #97453A;
+}
+.setting-title2{
+    /* 마이데이터 계좌통합 서비스 */
+    position: relative;
+    margin-left: 6%;
+    margin-top: 6%;
+    margin-bottom: 2%;
+
     font-family: Inter;
     font-style: normal;
     font-weight: bold;
@@ -154,6 +169,10 @@ color: #97453A;
     border: 0px;
     margin-bottom: 20px;
 }
+.setting-radio2{
+    border: 0px;
+    margin-bottom: 16px;
+}
 
 .radio{
     margin-left: 30px;
@@ -184,14 +203,12 @@ color: #97453A;
 
 .setting-period-box{
     /* Rectangle 26 */
-    margin-left: 10px;
-    margin-top: 5px;
-
     position: absolute;
     width: 337px;
-    height: 260px;
+    height: 235px;
     left: calc(50% - 337px/2 - 1px);
-    top: 469px;
+    top: 370px;
+    margin-left: 10px;
 
     background: #FFFFFF;
     border: 2px solid #97453A;
@@ -222,14 +239,37 @@ color: #97453A;
 
     color: #FFFFFF;
     border: 0px;
+}
+.setting-button2{
+    /* Rectangle 30 */
 
+    margin-left: 10px;
+    position: absolute;
+    width: 183px;
+    height: 44px;
+    left: calc(50% - 183px/2 - 1px);
+    top: 722px;
+
+    background: #97453A;
+    border-radius: 8px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    /* identical to box height */
+
+    text-align: center;
+    letter-spacing: -0.3px;
+
+    color: #FFFFFF;
+    border: 0px;
 }
 
 .period-text{
     position: absolute;
     width: 189px;
     left: calc(50% - 189px/2 - 1px);
-    margin-bottom: 5px;
     float:center;
     font-family: Inter;
     font-style: normal;
@@ -245,4 +285,25 @@ color: #97453A;
 }
 .period-text-box{
    height: 24px;
+}
+.setting-bottom{
+    /* 정예원님의 My 투자 현황 */
+    margin-bottom: 0px;
+    margin-left: 10px;
+
+    position: absolute; 
+    left: calc(50% - 375px/2 + 18px);
+    top: 661px;
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 24px;
+    display: block;
+    align-items: center;
+    letter-spacing: -0.3px;
+
+    color: #97453A;
+
 }
