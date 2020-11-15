@@ -1,4 +1,4 @@
-const { User, Account } = require("../models");
+const { User, Account, Stock } = require("../models");
 
 const home = async (req, res, next) => {
     console.log(req.session.user);
@@ -72,10 +72,56 @@ const top10 = async (req, res) => {
     });
     
 }
+const buyForm = (req, res) => {
+    const {stock_name, stock_number, stock_price, stock_percent} = req.body;
+    console.log(stock_name);
+    res.render('buy', {
+        stock_name: stock_name, 
+        stock_number: stock_number,
+        stock_price: stock_price,
+        stock_percent: stock_percent
+
+    });
+}
+
+const buy = async(req, res, next) => {
+    const {stock_name, stock_number, stock_price, amount} = req.body;
+    await Stock.create({
+        stockNumber: stock_number,
+        stockName: stock_name,
+        stockPrice: Number(stock_price),
+        stockAmount: Number(amount),
+        userId: req.session.user.id
+    }).then(() => {
+        res.redirect('/home/report');
+    }).catch(error => {
+        console.error(error);
+        return next(error);
+    });
+}
+
+const report = async(req, res, next) => {
+    await Stock.findAll({
+        where: {
+            userId: req.session.user.id
+        }
+    }).then(stocks => {
+        console.log(stocks);
+        res.render('report', {
+            stocks: stocks
+        });
+    }).catch(error => {
+        console.error(error);
+        return next(error);
+    });
+}
 
 module.exports = {
     home,
     setting,
     postSetting,
-    top10
+    top10,
+    buyForm,
+    buy,
+    report
 };

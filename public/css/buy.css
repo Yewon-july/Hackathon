@@ -100,97 +100,106 @@ color: #97453A;
     color: #97453A;
 
 }
-.stock-data-box2{
+
+.buy-box{
+    /* Rectangle 20 */
+
+    margin-left: 10px;
     position: absolute;
-    width: 308px;
-    height: 619px;
-    left: calc(50% - 308px/2 - 1.5px);
-    top: 162px;
+    width: 337px;
+    height: 440px;
+    left: calc(50% - 337px/2);
+    top: 180px;
 
+    background: #FFFFFF;
+    border: 2px solid #97453A;
+    box-sizing: border-box;
+    border-radius: 8px;
 }
-.stock-data-box{
-    /* Rectangle 45 */
-    position: relative;
-    /* width: 308px; */
-    /* height: 40px; */
-    left: calc(50% - 308px/2 - 1.5px);
-    /* display: block; */
-    /* border:1px solid #000000; */
-    /* background-color:green; */
-    padding-bottom: 2%;
-    /* margin: 1px; */
-    border-bottom: 1px solid ;
-    margin-bottom: 0px;
 
-}
-.stock-name{
-    /* 삼성전자 */
-    margin-bottom: 0px;
-    display: inline-block;
-    position: relative;
-
-    font-family: Inter;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 20px;
-    line-height: 24px;
-    letter-spacing: -0.3px;
-
-    color: #000000;
-
-}
-.stock-price{
-    position: relative;
-
-    font-family: Inter;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 19px;
-    letter-spacing: -0.3px;
-
-color: #FF0000;
-}
-.stock-percent{
-    /* 확률 68% */
-
-
-    position: relative;
-
-
-    font-family: Inter;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 17px;
-    /* identical to box height */
-
-    letter-spacing: -0.3px;
-    padding-left: 7px;
-    color: rgba(0, 0, 0, 0.7);
-}
 .buy-button{
     /* Rectangle 21 */
+    top: 637px;
 
-left: 260px;
-    position: absolute;
-    width: 51px;
-    height: 26px;
-    float: right;
-    margin-top: 30px;
+    margin-left: 10px;
+    position: relative;
+    display: block;
+    width: 183px;
+    height: 44px;
+    left: calc(50% - 183px/2 + 2px);
+
     background: #97453A;
     border-radius: 8px;
+    /* 매수 주문 */
+    /* top: 660px; */
+
     font-family: Inter;
     font-style: normal;
     font-weight: bold;
-    font-size: 14px;
-    line-height: 17px;
+    font-size: 18px;
+    line-height: 22px;
     /* identical to box height */
 
     text-align: center;
     letter-spacing: -0.3px;
-
-    color: #FFFFFF;
     border: 0px;
+    color: #FFFFFF;
+}
+.buy-box-small{
+    position: relative;
+    height: 70px;
+    left: calc(50% - 339px/2 - 1px);
+    display: block;
+    vertical-align: middle;
+}
+.buy-box-semititle{
+    position: relative;
+    display: inline-block;
+    margin-left: 20px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 27px;
+    /* identical to box height */
 
+    letter-spacing: -0.3px;
+
+    color: #97453A;
+
+}
+.buy-box-content{
+    position: relative;
+    display: inline-block;
+    float: right;
+    margin-top: 22px;
+    margin-right: 20px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: right;
+    letter-spacing: -0.3px;
+    color: rgba(0, 0, 0, 0.7);
+    }
+    .buy-box-content2{
+        width: 120px;
+        /* margin-top: 22px; */
+        position: relative;
+        display: inline-block;
+        /* float: right; */
+        margin-right: 5px;
+        font-family: Inter;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 24px;
+        text-align: right;
+        letter-spacing: -0.3px;
+        border: 1px solid rgba(0, 0, 0, 0.4);
+        color: rgba(0, 0, 0, 0.7);
+        }
+.out{
+    margin-right: 5px;
 }

@@ -1,0 +1,66 @@
+doctype HTML
+html
+    head
+        title 끝투  
+        meta(charset='utf-8')
+        meta(name="viewpoint" content="width=device-width, initial-scale=1.0")
+        link(rel='stylesheet' href='/css/report.css')
+        style.
+            a:link{
+                color: black; text-decoration: none;
+            }
+            a:visited{
+                color: black; text-decoration: none;
+            }
+            a:hover{
+                color: black; text-decoration: none;
+            }
+            table{
+                margin-top: 10px;
+                width: 100%;
+                text-align: center;
+            }
+            th{
+                font-family: Inter;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 20px;
+                line-height: 24px;
+                letter-spacing: -0.3px;
+                color: rgba(0, 0, 0, 0.6);
+
+            }
+            td{
+                padding-top: 10px; 
+                font-family: Inter;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 16px;
+                line-height: 19px;
+                letter-spacing: -0.3px;
+                color: #000000;
+            }
+    body
+        .logo-box
+            p.logo-big-p 끝
+                span.logo-small 전으로
+                span.logo-big 투
+                span.logo-small 자하다.
+        .tab-box
+            a(href='/home/setting' class='home-tab-set') My 투자설정
+            a(href='/home' class='home-tab-set') 계좌조회
+            a(href='/home/top10' class='home-tab-set') 추천 Top10
+        p.setting-top My 투자 현황
+        .report-box
+            table
+                tr
+                    th 종목명
+                    th 수익률
+                    th 매수단가
+                    th 수량
+                for stock in stocks
+                    tr
+                        td #{stock.stockName} 
+                        td 123%
+                        td #{stock.stockPrice} 
+                        td #{stock.stockAmount}

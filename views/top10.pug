@@ -26,6 +26,18 @@ html
             a(href='/home' class='home-tab-set') 계좌조회
             a(href='/home/top10' class='home-tab-set') 추천 Top10
         p.setting-top 추천 Top 10
-        for d in data
-            .stock-data-box
-                p #{d.stock_number}
+
+
+        .stock-data-box2
+            for d in data
+                form(action='/home/buyForm', method='post')
+                    input(type='hidden' id='stock_name' name='stock_name' value=d.stock_name )
+                    input(type='hidden' id='stock_number' name='stock_number' value=d.stock_number )
+                    input(type='hidden' id='stock_price' name='stock_price' value= d.stock_price)
+                    input(type='hidden' id='stock_percent' name='stock_percent' value=d.stock_percent)
+
+                    .stock-data-box
+                        p.stock-name #{d.stock_name} <br>
+                            span.stock-price #{d.stock_price}
+                            span.stock-percent 확률 #{d.stock_percent}%
+                        input(type='submit' value='주문').buy-button

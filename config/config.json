@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": null,
-    "database": "Hackathon_dev",
+    "password": "Victory2017",
+    "database": null,
     "host": "127.0.0.1",
     "port": 0,
     "dialect": "mysql"
