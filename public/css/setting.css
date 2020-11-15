@@ -250,20 +250,21 @@ color: #97453A;
     left: calc(50% - 183px/2 - 1px);
     top: 722px;
 
-    background: #97453A;
-    border-radius: 8px;
+    background: #FFFFFF;
+border: 2px solid #97453A;
+box-sizing: border-box;
+border-radius: 8px;
     font-family: Inter;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 22px;
-    /* identical to box height */
+font-style: normal;
+font-weight: bold;
+font-size: 18px;
+line-height: 22px;
+/* identical to box height */
 
-    text-align: center;
-    letter-spacing: -0.3px;
+text-align: center;
+letter-spacing: -0.3px;
 
-    color: #FFFFFF;
-    border: 0px;
+color: #97453A;
 }
 
 .period-text{

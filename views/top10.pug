@@ -39,5 +39,7 @@ html
                     .stock-data-box
                         p.stock-name #{d.stock_name} <br>
                             span.stock-price #{d.stock_price}
-                            span.stock-percent 확률 #{d.stock_percent}%
+                            - percent = Number(d.stock_percent) * 100
+                            - percent = percent.toFixed(1)
+                            span.stock-percent 확률 #{percent} %
                         input(type='submit' value='주문').buy-button

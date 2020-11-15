@@ -59,9 +59,9 @@ const top10 = async (req, res) => {
     await request('http://localhost:8000/json', (err, response, obj) => {
         if(!err&&response.statusCode==200){
             const parsed = JSON.parse(obj);
-            console.log(parsed);
-            console.log(parsed.stock);
-            console.log(parsed.stock.dataValues);
+            // console.log(parsed);
+            // console.log(parsed.stock);
+            // console.log(parsed.stock.dataValues);
 
 
             res.render('top10', {
@@ -92,6 +92,24 @@ const buy = async(req, res, next) => {
         stockPrice: Number(stock_price),
         stockAmount: Number(amount),
         userId: req.session.user.id
+    }).then(async() => {
+        await Account.findOne({
+            where: {
+                userId: req.session.user.id,
+                bankName: "project"
+            }
+        }).then((account) => {
+                console.log(account);
+                var balance = account.dataValues.balance-stock_price*amount;
+                Account.update({
+                    balance : balance
+                }, {
+                    where: {
+                        userId: req.session.user.id,
+                        bankName: "project"
+                    }
+                });
+        });
     }).then(() => {
         res.redirect('/home/report');
     }).catch(error => {
