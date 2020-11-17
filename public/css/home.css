@@ -59,7 +59,7 @@ color: #97453A;
 }
 .tab-box{
     position: absolute;
-    width: 378px;
+    /* width: 400px; */
     line-height: 51px;
     top: 64px;
     left: calc(50% - 347px/2);
@@ -73,7 +73,8 @@ color: #97453A;
     display: inline-block;
     position: relative;
     text-align: center;
-    height: 50px;
+    height: 48px;
+    top: 0px;
     vertical-align: middle;
     margin-right: 14px;
     margin-left: 14px;    
