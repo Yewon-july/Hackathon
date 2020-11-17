@@ -13,7 +13,7 @@ const home = async (req, res, next) => {
     // console.log(req.session.user);
     await Account.findAll({
         where: {
-            userId : 1//req.session.user.id
+            userId : 3//1//req.session.user.id
         }
     }).then(accounts => {
         console.log(accounts);
@@ -87,7 +87,7 @@ const buyForm = (req, res) => {
 }
 
 const report = async(req, res, next) => {
-    let query = "" + "select stockName, sum(stockAmount) as 'stockAmount', avg(stockPrice) as 'stockPrice' from stocks  where userId=1 group by stockName";
+    let query = "" + "select stockName, sum(stockAmount) as 'stockAmount', avg(stockPrice) as 'stockPrice' from stocks  where userId=3 group by stockName";
     await sequelize.query(query, 
         { type: Sequelize.QueryTypes.SELECT}
     ).then((stocks)=>{
@@ -109,7 +109,7 @@ const buy = async(req, res, next) => {
     }).then(async() => {
         await Account.findOne({
             where: {
-                userId: 1,
+                userId: 3,//1,
                 bankName: "project"
             }
         }).then((account) => {
@@ -119,7 +119,7 @@ const buy = async(req, res, next) => {
                     balance : balance
                 }, {
                     where: {
-                        userId: 1,//req.session.user.id,
+                        userId: 3,//req.session.user.id,
                         bankName: "project"
                     }
                 });

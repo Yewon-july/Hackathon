@@ -43,7 +43,8 @@ html
                 else
                     .account-info-box
                         p.account-bank #{account.bankName}
-                        p.account-balance #{account.balance} 원
+                        -balance3 = accout.balance.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                        p.account-balance #{balance3} 원
             input(type='button', value='계좌 추가' class='account-add')
             p.account-warning 더 많은 계좌를 조회하고 싶으시다면<br>위 버튼을 눌러주세요!
         .project-info-box
