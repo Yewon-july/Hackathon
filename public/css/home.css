@@ -73,7 +73,6 @@ color: #97453A;
     display: inline-block;
     position: relative;
     text-align: center;
-    width: 90;
     height: 50px;
     vertical-align: middle;
     margin-right: 14px;
@@ -242,7 +241,6 @@ color: rgba(0, 0, 0, 0.7);
     color: #FFFFFF;
 }
 .account-warning{
-    width: 200px;
     position: absolute;
     left: calc(50% - 183px/2);
 
@@ -261,11 +259,10 @@ color: rgba(0, 0, 0, 0.7);
 .account-warning2{
     /* 오늘의 추천 종목을 구경하고 싶으시다면 추천 Top10을 참고하세요! */
     position: absolute;
-    width: 250px;
     /* height: 31px; */
     left: calc(50% - 235px/2);
     /* top: 733px; */
-
+    margin-left: 20px;
     font-family: Inter;
     font-style: normal;
     font-weight: normal;
