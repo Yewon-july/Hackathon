@@ -17,8 +17,8 @@ const postSignup = async (req, res) => {
             transferDate: date
         }).then(user => {
             req.session.user = {
-                id: user.dataValues.id,
-                name: user.dataValues.name
+                id: 1,//user.dataValues.id,
+                name: 'koscom', //user.dataValues.name
             };
         });
         res.redirect('/home');

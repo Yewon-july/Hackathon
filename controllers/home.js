@@ -18,7 +18,7 @@ const home = async (req, res, next) => {
     }).then(accounts => {
         console.log(accounts);
         res.render('home', {
-            userName: req.session.user.name,
+            userName: koscom,//req.session.user.name,
             accounts: accounts
         });
     }).catch(error => {
