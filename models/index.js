@@ -15,6 +15,7 @@ db.User = require('./user')(sequelize, Sequelize);
 //db.Bank = require('./bank')(sequelize, Sequelize);
 db.Account = require('./account')(sequelize, Sequelize);
 db.Stock = require('./stock')(sequelize, Sequelize);
+db.Recommend = require('./recommend')(sequelize, Sequelize);
 
 //모델간의 관계를 정의한다.
 //db.Bank.belongsTo(db.User);
