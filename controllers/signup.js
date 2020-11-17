@@ -17,7 +17,7 @@ const postSignup = async (req, res) => {
             transferDate: date
         }).then(user => {
             req.session.user = {
-                id: 1,//user.dataValues.id,
+                id: 3,//user.dataValues.id,
                 name: '코스콤', //user.dataValues.name
             };
         });

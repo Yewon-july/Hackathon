@@ -16,7 +16,7 @@ const login = async(req, res, next) => {
         console.log(user);
         console.log(user.dataValues);
         req.session.user = {
-            id: 1,//user.dataValues.id,
+            id: 3,//user.dataValues.id,
             name:'코스콤', //user.dataValues.name
         };
         res.redirect('/home');

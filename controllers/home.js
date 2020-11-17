@@ -30,7 +30,7 @@ const home = async (req, res, next) => {
 const setting = async (req, res, next) => {
     await User.findOne({
         where: {
-            id : 1//,req.session.user.id
+            id : 3//,req.session.user.id
         }
     }).then(user => {
         // console.log(user);
@@ -55,7 +55,7 @@ const postSetting = async (req, res, next) => {
         expectedProfits: parseInt(profits)
     },{
         where: {
-            id: 1//req.session.user.id
+            id: 3//req.session.user.id
         }
     }).then(user =>{
         res.redirect('/home/setting');
@@ -104,7 +104,7 @@ const buy = async(req, res, next) => {
         stockName: stock_name,
         stockPrice: Number(stock_price),
         stockAmount: Number(amount),
-        userId: 1,//eq.session.user.id,
+        userId: 3,//eq.session.user.id,
         marketCode: market_code
     }).then(async() => {
         await Account.findOne({
