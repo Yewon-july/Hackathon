@@ -16,6 +16,10 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false,
             unique: true,
         },
+        telegramId: {
+            type: DataTypes.STRING(50),
+            allowNull: true,
+        },
         name: {
             type: DataTypes.STRING(30),
             allowNull: false,
@@ -34,6 +38,10 @@ module.exports = (sequelize, DataTypes) => {
         transferPeriod: {
             type: DataTypes.INTEGER(10),
             defaultValue: 1
+        },
+        expectedProfits:{
+            type: DataTypes.INTEGER(3),
+            defaultValue: 2
         }
         }, {
         timestamps: false,

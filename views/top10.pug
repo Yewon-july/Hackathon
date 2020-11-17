@@ -24,7 +24,9 @@ html
         .tab-box
             a(href='/home/setting' class='home-tab-set') My 투자설정
             a(href='/home' class='home-tab-set') 계좌조회
-            a(href='/home/top10' class='home-tab-set') 추천 Top10
+            a(href='/home/top10' class='home-tab-set') 추천 종목
+            a(href='/home/report' class='home-tab-set') 포트폴리오
+
         p.setting-top 추천 Top 10
 
 
@@ -35,6 +37,7 @@ html
                     input(type='hidden' id='stock_number' name='stock_number' value=d.stock_number )
                     input(type='hidden' id='stock_price' name='stock_price' value= d.stock_price)
                     input(type='hidden' id='stock_percent' name='stock_percent' value=d.stock_percent)
+                    input(type='hidden' id='market_code' name='market_code' value=d.market_code)
 
                     .stock-data-box
                         p.stock-name #{d.stock_name} <br>

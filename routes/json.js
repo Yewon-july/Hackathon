@@ -1,16 +1,13 @@
 const express = require("express");
 const router = express.Router();
-
-const json = (req, res) => {
-    const json= require('../controllers/stock_data_2.json');
-
-    res.json(json);
-}
-
+const {json, kospi, kosdaq, purchase} = require('../controllers/json');
 
 
 router.get('', json);
-
+router.get('/kospi', kospi);
+router.get('/kosdaq', kosdaq);
+router.get('/purchse', purchase);
 
 
 module.exports = router;
+

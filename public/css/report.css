@@ -71,11 +71,14 @@ color: #97453A;
 
 .home-tab-set{
     display: inline-block;
+    position: relative;
     text-align: center;
-    width: 126px;
+    width: 90;
     height: 50px;
     vertical-align: middle;
-    
+    margin-right: 14px;
+    margin-left: 14px;    
+    color: #97453A;
 }
 
 .setting-top{
@@ -96,23 +99,88 @@ color: #97453A;
     display: block;
     align-items: center;
     letter-spacing: -0.3px;
-
+    vertical-align: middle;
     color: #97453A;
 
 }
 
 .report-box{
     /* Rectangle 20 */
+    display: block;
+    margin-left: 10px;
+    position: relative;
+    width: 337px;
+    height: 480px;
+    left: calc(50% - 337px/2);
+    top: 173px;
+    /* top: 223px; */
 
-margin-left: 10px;
-position: absolute;
-width: 337px;
-height: 584px;
-left: calc(50% - 337px/2);
-top: 173px;
+    background: #FFFFFF;
+    border: 2px solid #97453A;
+    box-sizing: border-box;
+    border-radius: 8px;
+}
+.report-button{
+    /* Rectangle 21 */
 
-background: #FFFFFF;
-border: 2px solid #97453A;
-box-sizing: border-box;
-border-radius: 8px;
+
+    position: relative;
+    width: 183px;
+    height: 44px;
+    left: calc(50% - 183px/2);
+    /* top: 736px; */
+
+    background: #97453A;
+    border-radius: 8px;
+    font-family: Inter;
+font-style: normal;
+font-weight: bold;
+font-size: 18px;
+line-height: 22px;
+/* identical to box height */
+
+text-align: center;
+letter-spacing: -0.3px;
+
+color: #FFFFFF;
+    }
+
+
+.buy-button{
+    /* Rectangle 21 */
+    top: 637px;
+
+    margin-left: 10px;
+    position: relative;
+    display: block;
+    width: 183px;
+    height: 44px;
+    left: calc(50% - 183px/2 + 2px);
+
+    background: #97453A;
+    border-radius: 8px;
+    /* 매수 주문 */
+    /* top: 660px; */
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    /* identical to box height */
+
+    text-align: center;
+    letter-spacing: -0.3px;
+    border: 0px;
+    color: #FFFFFF;
+}
+
+.week{/* 이번 주 */
+    margin-top: 20px;
+    margin-right: 40px;
+    float: right;
+}
+.inline-block{
+    display: inline-block;
+    float: left;
 }

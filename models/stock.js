@@ -26,6 +26,20 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.INTEGER(10),
         allowNull: false
       },
+      marketCode: {
+        type: DataTypes.STRING(10),
+        allowNull: false
+      },
+      profits:{
+        type: DataTypes.INTEGER(10),
+        allowNull: true,
+        defaultValue: 100
+      },
+      createdAt: {
+        type: DataTypes.DATE,
+        allowNull: false,
+        defaultValue: sequelize.literal('now()'),
+      }
     }, {
       timestamps: false,
     });

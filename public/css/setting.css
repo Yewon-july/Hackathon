@@ -59,7 +59,7 @@ color: #97453A;
 }
 .tab-box{
     position: absolute;
-    width: 378px;
+    width: 380px;
     line-height: 51px;
     top: 64px;
     left: calc(50% - 347px/2);
@@ -69,13 +69,17 @@ color: #97453A;
     border-color: #97453A;
 }
 
+
 .home-tab-set{
     display: inline-block;
+    position: relative;
     text-align: center;
-    width: 126px;
+    width: 90;
     height: 50px;
     vertical-align: middle;
-    
+    margin-right: 14px;
+    margin-left: 14px;    
+    color: #97453A;
 }
 
 .setting-top{
@@ -106,7 +110,7 @@ color: #97453A;
     margin-left: 10px;
     position: absolute;
     width: 337px;
-    height: 183px;
+    height: 480px;
     left: calc(50% - 337px/2 - 1px);
     top: 172px;
 
@@ -149,6 +153,26 @@ color: #97453A;
     color: #97453A;
 }
 
+.setting-title3{
+    /* 마이데이터 계좌통합 서비스 */
+    position: relative;
+    margin-left: 6%;
+    margin-top: 6%;
+    margin-bottom: 2%;
+    display: inline-block;
+    float: left;
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    /* identical to box height */
+    letter-spacing: -0.3px;
+
+    color: #97453A;
+}
+
 .setting-radio-label{
     /* 1,000원 미만 */
     margin-left: 12px;
@@ -175,6 +199,8 @@ color: #97453A;
 }
 
 .radio{
+    margin-top: 0px;
+
     margin-left: 30px;
     margin-bottom: 20px;
 }
@@ -223,6 +249,7 @@ color: #97453A;
     width: 183px;
     height: 44px;
     left: calc(50% - 183px/2 - 2px);
+    top: 680px;
 
     background: #97453A;
     border-radius: 8px;
@@ -307,4 +334,24 @@ color: #97453A;
 
     color: #97453A;
 
+}
+.select{
+    right: 10px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: -0.3px;
+
+    color: rgba(0, 0, 0, 0.8);
+    float: right;
+    display: inline-block;
+    margin-top: 20px;
+    margin-bottom: 6px;
+    margin-right: 20px;
+}
+.box{
+    vertical-align: middle;
 }

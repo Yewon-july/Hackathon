@@ -71,11 +71,14 @@ color: #97453A;
 
 .home-tab-set{
     display: inline-block;
+    position: relative;
     text-align: center;
-    width: 126px;
+    width: 90;
     height: 50px;
     vertical-align: middle;
-    
+    margin-right: 14px;
+    margin-left: 14px;    
+    color: #97453A;
 }
 .profile-img{
     display: inline-block;

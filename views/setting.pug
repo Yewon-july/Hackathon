@@ -24,12 +24,18 @@ html
         .tab-box
             a(href='/home/setting' class='home-tab-set') My 투자설정
             a(href='/home' class='home-tab-set') 계좌조회
-            a(href='/home/top10' class='home-tab-set') 추천 Top10
-        
+            a(href='/home/top10' class='home-tab-set') 추천 종목
+            a(href='/home/report' class='home-tab-set') 포트폴리오
+
         p.setting-top #{user.name}님의 My 투자 설정
-        form(method='post', action='/home/setting')
+        form(method='post', name='myForm', id='myForm', action='/home/setting')
             .setting-amount-box
-                p.setting-title 끝전 단위 설정
+                div
+                    p.setting-title 이체 일자 설정
+                    div.period-text-box
+                        input(type='text', id='date', name='date', value=user.transferDate. placeholder=user.transferDate).period-text
+                
+                p.setting-title2 끝전 단위 설정
                     div.radio
                         if(user.transferAmount=='1')
                             input(type='radio', id='amount', name='amount',  value=1, checked).setting-radio
@@ -50,38 +56,52 @@ html
                         label(for='100000').setting-radio-label 100,000원 미만
                         <br>
                     //- p.setting-warning [주의] 본인의 소득/재산에 적절한<br>투자를 권장합니다.
-            .setting-period-box
-                div
-                    p.setting-title 이체 일자 설정
-                    div.period-text-box
-                        input(type='text', id='date', name='date', placeholder=user.transferDate).period-text
-                div
-                    .setting-title2 이체 주기 설정
-                    .radio2
-                        if(user.transferPeriod=='1')
-                            input(type='radio', id='period', name='period', value=1, checked).setting-radio2
-                        else
-                            input(type='radio', id='period', name='period', value=1).setting-radio2
-                        label(for='week').setting-radio-label 매주<br>
+                .setting-title2 이체 주기 설정
+                .radio2
+                    if(user.transferPeriod=='1')
+                        input(type='radio', id='period', name='period', value=1, checked).setting-radio2
+                    else
+                        input(type='radio', id='period', name='period', value=1).setting-radio2
+                    label(for='week').setting-radio-label 매주<br>
 
-                        if(user.transferPeriod=='2')
-                            input(type='radio', id='period', name='period', value=2, checked).setting-radio2
-                        else
-                            input(type='radio', id='period', name='period', value=2).setting-radio2
-                        label(for='week2').setting-radio-label 격주<br>
+                    if(user.transferPeriod=='2')
+                        input(type='radio', id='period', name='period', value=2, checked).setting-radio2
+                    else
+                        input(type='radio', id='period', name='period', value=2).setting-radio2
+                    label(for='week2').setting-radio-label 격주<br>
 
-                        if(user.transferPeriod=='3')
-                            input(type='radio',id='period', name='period', value=3, checked).setting-radio2
+                    if(user.transferPeriod=='3')
+                        input(type='radio',id='period', name='period', value=3, checked).setting-radio2
+                    else
+                        input(type='radio',id='period', name='period', value=3).setting-radio2
+                    label(for='month').setting-radio-label 매달<br>
+                div.box
+                    .setting-title3 희망 수익률 설정
+                    select(name='profits' id='profits' form='myForm').select
+                        if(user.expectedProfits=='2')
+                            option(value='2' selected) 2%
                         else
-                            input(type='radio',id='period', name='period', value=3).setting-radio2
-                        label(for='month').setting-radio-label 매달<br>
-
-                div
-                    input(type='submit', value='설정 완료').setting-button
+                            option(value='2') 2%
+                        if(user.expectedProfits=='3')
+                            option(value='3' selected) 3%
+                        else
+                            option(value='3') 3%
+                        if(user.expectedProfits=='4')
+                            option(value='4' selected) 4%
+                        else
+                            option(value='4') 4%
+                        if(user.expectedProfits=='5')
+                            option(value='5' selected) 5%
+                        else
+                            option(value='5') 5%
+                        if(user.expectedProfits=='6')
+                            option(value='6' selected) 6%
+                        else
+                            option(value='6') 6%
+                        if(user.expectedProfits=='7')
+                            option(value='7' selected) 7%
+                        else
+                            option(value='7') 7%
+            div
+                input(type='submit', value='설정 완료').setting-button
         
-        p.setting-bottom #{user.name}님의 My 투자 현황
-        form(method='get', action='/home/report')
-            input(type='submit', value='현황 확인').setting-button2
-
-
-
