@@ -217,7 +217,7 @@ color: #97453A;
     font-weight: normal;
     font-size: 14px;
     line-height: 15px;
-    display: flex;
+    display: inline-block;
     align-items: center;
     text-align: center;
     letter-spacing: -0.3px;

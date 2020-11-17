@@ -71,7 +71,8 @@ html
                     for stock in stocks
                         tr
                             td #{stock.stockName} 
-                            - var a=Number(stock.stockPrice).toFixed(0)
+                            - var a=Number(stock.stockPrice).toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+
                             td #{stock.stockAmount}
                             td #{a}
             input(type='submit' value='확인').buy-button

@@ -28,7 +28,8 @@ module.exports = (sequelize, DataTypes) => {
       },
       marketCode: {
         type: DataTypes.STRING(10),
-        allowNull: false
+        allowNull: false,
+        defaultValue: 'kospi'
       },
       profits:{
         type: DataTypes.INTEGER(10),

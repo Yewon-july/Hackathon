@@ -48,5 +48,6 @@ html
             p.account-warning 더 많은 계좌를 조회하고 싶으시다면<br>위 버튼을 눌러주세요!
         .project-info-box
             p.account-title2 끝전 잔액
-            p.project-balance #{balance} 원
+            - balance2 = balance.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+            p.project-balance #{balance2 }원
             p.account-warning2 오늘의 추천 종목을 구경하고 싶으시다면<br> 추천 Top10을 참고하세요!

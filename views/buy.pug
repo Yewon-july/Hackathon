@@ -21,7 +21,9 @@ html
                 $("#amount").keyup(function(){
                     console.log("Amount: " + $("#amount").val());
                     console.log("Stock_price: " + $("#stock_price").val());
-                    $("#out").text(Number($("#amount").val())*Number($("#stock_price").val()));
+                    var x = Number($("#amount").val())*Number($("#stock_price").val());
+                    
+                    $("#out").text(x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
                 });
             });
     body
@@ -56,7 +58,8 @@ html
                         span 주
                 .buy-box-small
                     p.buy-box-semititle 단가
-                    p.buy-box-content #{stock_price} 원
+                    -price = stock_price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+                    p.buy-box-content #{price} 원
                     input(type='hidden', id='stock_price', name='stock_price', value= stock_price )
                     input(type='hidden', id='market_code', name='market_code', value= market_code )
 

@@ -41,7 +41,8 @@ html
 
                     .stock-data-box
                         p.stock-name #{d.stockName} <br>
-                            span.stock-price #{d.currentPrice}
+                            - price = d.currentPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+                            span.stock-price #{price}
                             //- - percent = Number(d.stockPercent) * 100
                             //- - percent = percent.toFixed(1)
                             span.stock-percent 확률 #{d.stockPercent} %
