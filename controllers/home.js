@@ -1,6 +1,8 @@
-const { User, Account, Stock } = require("../models");
+const { User, Account, Stock, Recommend } = require("../models");
 
 const Sequelize = require('sequelize');
+const { render } = require("pug");
+const { renameSync } = require("fs");
 const env = process.env.NODE_ENV || 'development';
 const config = require('../config/config')[env];
 const sequelize = new Sequelize(
@@ -64,21 +66,12 @@ const postSetting = async (req, res, next) => {
 }
 
 const top10 = async (req, res) => {
-    var request=require('request');
-    await request('http://localhost:8000/json', (err, response, obj) => {
-        if(!err&&response.statusCode==200){
-            const parsed = JSON.parse(obj);
-            // console.log(parsed);
-            // console.log(parsed.stock);
-            // console.log(parsed.stock.dataValues);
-
-
-            res.render('top10', {
-                data: parsed.stock.dataValues
-            });
-        }
-        
-    });
+    Recommend.findAll().then(rec => {
+        console.log(rec);
+        res.render('top10', {
+            data: rec
+        });
+    })
     
 }
 const buyForm = (req, res) => {
