@@ -67,7 +67,5 @@ html
                         span 원
                 .buy-box-small
                     p.buy-box-semititle 확률
-                    - percent = Number(stock_percent) * 100
-                    - percent = percent.toFixed(1)
-                    p.buy-box-content #{percent} %
+                    p.buy-box-content #{stock_percent} %
             input(type='submit' value='매수 주문').buy-button
